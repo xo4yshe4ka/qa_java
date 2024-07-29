@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class TestLionDoesHaveMane {
 
-    private Feline feline;
+    Feline feline;
     private String sex;
     private boolean expectedHasMane;
 
@@ -22,18 +22,13 @@ public class TestLionDoesHaveMane {
     public static Object[][] getLion() {
         return new Object[][] {
             {"Самец", true},
-            {"Самка", false},
-            {"Небинарный", false}
+            {"Самка", false}
         };
     }
 
     @Test
     public void testDoesHaveMane() throws Exception {
-        try {
             Lion lion = new Lion(sex, feline);
             assertEquals(expectedHasMane, lion.doesHaveMane());
-        } catch (Exception e) {
-            assertEquals("Используйте допустимые значения пола животного - самец или самка", e.getMessage());
-        }
     }
 }

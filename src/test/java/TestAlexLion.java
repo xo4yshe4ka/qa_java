@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class TestAlexLion {
 
     private AlexLion alexLion;
-    private Feline feline;
+    Feline feline;
 
     @Before
     public void setUp() throws Exception {

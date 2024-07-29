@@ -9,7 +9,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -24,6 +24,16 @@ public class TestLion {
     @Before
     public void setUp() throws Exception {
         lion = new Lion("Самец", feline);
+    }
+
+    @Test
+    public void testLionException() {
+        try {
+            lion = new Lion("Небинарный", feline);
+            fail("Конструктор должен был выбросить исключение для некорректного пола");
+        } catch (Exception e) {
+            assertEquals("Используйте допустимые значения пола животного - самец или самка", e.getMessage());
+        }
     }
 
     @Test
