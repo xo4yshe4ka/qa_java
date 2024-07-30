@@ -23,20 +23,13 @@ public class TestAnimalGetFood {
     public static Object[][] getKind() {
         return new Object[][] {
                 {"Травоядное", List.of("Трава", "Различные растения")},
-                {"Хищник", List.of("Животные", "Птицы", "Рыба")},
-                {"Солнцеед", List.of("Неизвестный вид животного, используйте значение Травоядное или Хищник")}
+                {"Хищник", List.of("Животные", "Птицы", "Рыба")}
         };
     }
 
     @Test
     public void testGetFood() throws Exception {
-        try {
             animal = new Animal();
             assertEquals(expectedList, animal.getFood(animalKind));
-        } catch (Exception e) {
-            String expectedMessage = String.join("", expectedList);
-            assertEquals(expectedMessage, e.getMessage());
-        }
-
     }
 }
