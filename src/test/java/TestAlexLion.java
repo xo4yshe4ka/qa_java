@@ -28,6 +28,7 @@ public class TestAlexLion {
     public void testGetFriends() {
         List<String> expectedListFriends = Arrays.asList("Marty", "Gloria", "Melman");
         assertEquals("Lion Alex has 3 friends: Marty, Gloria, Melman", expectedListFriends, alexLion.getFriends());
+
     }
 
     @Test
