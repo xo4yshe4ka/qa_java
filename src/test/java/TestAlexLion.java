@@ -34,5 +34,6 @@ public class TestAlexLion {
     public void testGetPlaceOfLiving() {
         String expectedPlaceLiving = "New York zoo";
         assertEquals("Alex lives at the New York zoo", expectedPlaceLiving, alexLion.getPlaceOfLiving());
+
     }
 }
