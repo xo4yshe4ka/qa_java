@@ -28,11 +28,13 @@ public class TestAlexLion {
     public void testGetFriends() {
         List<String> expectedListFriends = Arrays.asList("Marty", "Gloria", "Melman");
         assertEquals("Lion Alex has 3 friends: Marty, Gloria, Melman", expectedListFriends, alexLion.getFriends());
+
     }
 
     @Test
     public void testGetPlaceOfLiving() {
         String expectedPlaceLiving = "New York zoo";
         assertEquals("Alex lives at the New York zoo", expectedPlaceLiving, alexLion.getPlaceOfLiving());
+
     }
 }
